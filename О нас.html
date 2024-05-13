@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+
+  @font-face {
+    font-family: "InterLight";
+    src: url("./Inter-Light.otf");
+}
+  body {
+    font-family: "InterLight";
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .fon {
+    background-color: #dcc7b5;
+  }
+  
+  .nachalo{
+    color: #2b070b;
+    font-size: 45px;
+    margin-top: 50px;
+    width: 1450px;
+  }
+  
+  .text1 {
+    color: #2b070b;
+    font-size: 18px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+  
+  .image {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+  }
+
+  /* Стили для устройств с шириной экрана менее 768px (например, для телефонов) */
+@media only screen and (max-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под мобильные устройства здесь */
+    /* Например: */
+    .header {
+        font-size: 16px; /* Уменьшение размера шрифта для заголовка */
+    }
+}
+
+/* Стили для устройств с шириной экрана от 768px и выше (например, для компьютеров) */
+@media only screen and (min-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под компьютеры здесь */
+    /* Например: */
+    .header {
+        font-size: 24px; /* Увеличение размера шрифта для заголовка */
+    }
+}
+
+</style>
+</head>
+<body class="fon">
+  <header >
+    <ul class="navigation" color: #722F37;>
+        <li><a href="О нас.html">О нас</a></li>
+        <li><a href="Меню.html">Меню</a></li>
+        <a href="сайт.html">
+            <img src="img/лого_икон.svg" alt="Лого" />
+          </a>
+        <li><a href="Отзывы.html">Отзывы</a></li>
+        <li><a href="Контакты.html">Контакты</a></li>
+        <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
+    </ul>
+</header>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Зарезервировать</h1>
+        <form id="bookingForm">
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required><br>
+            
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required><br>
+            
+            <label for="preferences">Пожелания:</label>
+            <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+            
+            <label for="location">Расположение стола:</label>
+            <select id="location" name="location">
+            
+            <option value="window">У окна</option>
+            <option value="quiet">Спокойное место</option>
+            <option value="bar">У барной стойки</option>
+            </select><br>
+            
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+  <h1 class="nachalo"> О нас</h1>
+
+  <div class="image-container">
+    <img class="image" src="img/о_нас.jpg" alt="О нас">
+    <p class="text1">Добро пожаловать в "VG" - ресторан, где встречаются высокая кухня и роскошное вино. Наше меню предлагает уникальные гастрономические изыски, вдохновленные мировыми кулинарными традициями. Вино нашей тщательно подобранной карты подчеркнет вкус каждого блюда. Ощутите искусство в каждом приеме и окунитесь в мир неповторимых вкусов в "VG".</p>
+    <img class="image" src="img/работ.jpg" alt="О нас">
+  </div>
+<div class="footer">
+  <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+</div> 
+</body>
+</html>
+
+
+
+

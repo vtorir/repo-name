@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+  @font-face {
+    font-family: "InterLight";
+    src: url("./Inter-Light.otf");
+  }
+  body {
+    font-family: "InterLight";
+    background-color: #f4f4e6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .fon {
+    background-color: #dcc7b5;
+  }
+
+  header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.review-form {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.otz{
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-form input[type="text"],
+.review-form input[type="email"],
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dcc7b5;
+    border-radius: 5px;
+}
+
+.review-form textarea {
+    height: 100px;
+}
+
+.review-form button {
+    background-color: #2b070b;
+    color: #dcc7b5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.review-form button:hover {
+    background-color: #722F37;
+}
+
+.reviews {
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.review-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.review {
+  flex: 0 0 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.review h3 {
+  margin-bottom: 10px;
+}
+
+.review p {
+  margin: 0;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #dcc7b5;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для устройств с шириной экрана менее 768px (например, для телефонов) */
+@media only screen and (max-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под мобильные устройства здесь */
+    /* Например: */
+    .header {
+        font-size: 16px; /* Уменьшение размера шрифта для заголовка */
+    }
+}
+
+/* Стили для устройств с шириной экрана от 768px и выше (например, для компьютеров) */
+@media only screen and (min-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под компьютеры здесь */
+    /* Например: */
+    .header {
+        font-size: 24px; /* Увеличение размера шрифта для заголовка */
+    }
+}
+  
+</style>
+</head>
+<body class="fon">
+  <header >
+    <ul class="navigation" color: #722F37;>
+        <li><a href="О нас.html">О нас</a></li>
+        <li><a href="Меню.html">Меню</a></li>
+        <a href="сайт.html">
+            <img src="img/лого_икон.svg" alt="Лого" />
+          </a>
+        <li><a href="Отзывы.html">Отзывы</a></li>
+        <li><a href="Контакты.html">Контакты</a></li>
+        <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
+    </ul>
+</header>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Зарезервировать</h1>
+        <form id="bookingForm">
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required><br>
+            
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required><br>
+            
+            <label for="preferences">Пожелания:</label>
+            <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+            
+            <label for="location">Расположение стола:</label>
+            <select id="location" name="location">
+            
+            <option value="window">У окна</option>
+            <option value="quiet">Спокойное место</option>
+            <option value="bar">У барной стойки</option>
+            </select><br>
+            
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+  <body>
+    <main>
+      <section class="review-form">
+          <h2>Оставьте ваш отзыв</h2>
+          <form action="#" method="POST">
+              <label for="name">Ваше имя:</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Ваш email:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="message">Ваш отзыв:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              
+              <button type="submit">Отправить</button>
+          </form>
+      </section>
+
+      <section class="reviews">
+        <h1 class="otz">Отзывы наших гостей</h1>
+        <div class="reviews-container">
+            <div class="review-list">
+                <div class="review">
+                    <h3>Иван</h3>
+                    <p>Отличный ресторан с изысканными блюдами и прекрасным обслуживанием!</p>
+                </div>
+                <div class="review">
+                    <h3>Мария</h3>
+                    <p>Прекрасное место для романтического ужина! Будем рекомендовать друзьям!</p>
+                </div>
+                <div class="review">
+                    <h3>Алексей</h3>
+                    <p>Отличная атмосфера и вкуснейшие блюда! Обязательно вернемся снова!</p>
+                </div>
+                <div class="review">
+                  <h3>Александра</h3>
+                  <p>Шикарный ресторан и безумно вкусная еда и напитки. Рекомендую всем!</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev-btn">Предыдущий</button>
+        <button class="next-btn">Следующий</button>
+    </section>
+    <script src="script.js"></script>
+    </main>
+  </body>
+  <div class="footer">
+    <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+</div> 
+</body>
+</html>
+
+
+

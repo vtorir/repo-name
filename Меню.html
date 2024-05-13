@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+    
+    @font-face {
+        font-family: "InterLight";
+        src: url("./Inter-Light.otf");
+    }
+    body {
+        font-family: "InterLight";
+    }
+
+    .fon {
+        background-color: #dcc7b5;
+    }
+
+    .res {
+        text-align: center;
+        color: #2b070b;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    .vino{
+        text-align: center;
+        color: #2b070b;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+    }
+    .dish {
+        width: 300px;
+        margin-top: 30px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .menu img {
+        width: 100%;
+        max-height: 200px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(186, 16, 16, 0.1);
+    }
+    h2 {
+        color: #2b070b;
+        margin-top: 10px;
+    }
+    .menu p, 
+    .vino p {
+        color: #2b070b;
+    }
+    .dish:hover {
+        transform: scale(1.05); /* Немного увеличим размер блока при наведении */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu .dish p {
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+
+    .menu .dish {
+        position: relative;
+    }
+
+    .menu .dish::after {
+        content: attr(data-price);
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(225, 147, 147, 0.8);
+        border-radius: 5px;
+        padding: 5px 10px;
+        display: none;
+        font-size: 14px;
+    }
+
+    .menu .dish:hover::after {
+        display: block;
+    }
+/* Стили для устройств с шириной экрана менее 768px (например, для телефонов) */
+@media only screen and (max-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под мобильные устройства здесь */
+    /* Например: */
+    .header {
+        font-size: 16px; /* Уменьшение размера шрифта для заголовка */
+    }
+}
+
+/* Стили для устройств с шириной экрана от 768px и выше (например, для компьютеров) */
+@media only screen and (min-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под компьютеры здесь */
+    /* Например: */
+    .header {
+        font-size: 24px; /* Увеличение размера шрифта для заголовка */
+    }
+}
+    </style>
+</head>
+<body class="fon">
+    <header >
+        <ul class="navigation" color: #722F37;>
+            <li><a href="О нас.html">О нас</a></li>
+            <li><a href="Меню.html">Меню</a></li>
+            <a href="сайт.html">
+                <img src="img/лого_икон.svg" alt="Лого" />
+              </a>
+            <li><a href="Отзывы.html">Отзывы</a></li>
+            <li><a href="Контакты.html">Контакты</a></li>
+            <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
+        </ul>
+    </header>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Зарезервировать</h1>
+            <form id="bookingForm">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required><br>
+                
+                <label for="time">Время:</label>
+                <input type="time" id="time" name="time" required><br>
+                
+                <label for="preferences">Пожелания:</label>
+                <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+                
+                <label for="location">Расположение стола:</label>
+                <select id="location" name="location">
+                
+                <option value="window">У окна</option>
+                <option value="quiet">Спокойное место</option>
+                <option value="bar">У барной стойки</option>
+                </select><br>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        
+    <h1 class="res">Меню ресторана</h1>
+
+    <div class="menu">
+        <div class="dish" data-price="1500">
+            <img src="img/фуа-гра.jpeg" alt="Фуа-гра">
+            <h2>Фуа-гра</h2>
+            <p>на гренки с вишневым соусом и карамелизированным луком</p>
+        </div>
+
+        <div class="dish" data-price="1000">
+            <img src="img/тартар.jpg" alt="Диш2">
+            <h2>Тартар</h2>
+            <p>из тунца с авокадо, манго и сладкой ваты</p>
+        </div>
+
+        <div class="dish" data-price="1500">
+            <img src="img/карпаччо.jpg" alt="Диш3">
+            <h2>Карпаччо</h2>
+            <p>из говядины с пармезаном, рукколой и трюфелным соусом</p>
+        </div>
+
+        <div class="dish" data-price="1000">
+            <img src="img/креветки.jpg" alt="Диш4">
+            <h2>Креветки</h2>
+            <p>в кокосовой панировке с манго-чили соусом</p>
+        </div>
+
+        <div class="dish" data-price="2000">
+            <img src="img/медальоны.jpg" alt="Диш4">
+            <h2>Медальоны филе</h2>
+            <p>маринованной свинины со сливочным соусом, подается с картофельным пюре</p>
+        </div>
+
+        <div class="dish" data-price="3000">
+            <img src="img/омар.jpg" alt="Диш4">
+            <h2>Мясо омара</h2>
+            <p>со спагетти "Al Aragosta" в томатном соусе</p>
+        </div>
+
+        <div class="dish" data-price="2000">
+            <img src="img/утка.jpeg" alt="Диш4">
+            <h2>Утиная грудка</h2>
+            <p>с пюре из батата, зеленью и ягодным соусом</p>
+        </div>
+        
+        <div class="dish" data-price="2500">
+            <img src="img/сёмга.webp" alt="Диш4">
+            <h2>Стейк из сёмги</h2>
+            <p>с сосуом тар-тар, зеленью и лимоном</p>
+        </div>
+    </div>
+
+        <h1 class="vino">Вино</h1>
+        <div class="menu">
+            <div class="dish" data-price="5500">
+                <h2>Шампанское</h2>
+                <p>"Dom Pérignon Vintage" 2010 года</p>
+            </div>
+
+            <div class="dish" data-price="5000">
+                <h2>Бургундское вино </h2>
+                <p>"Domaine de la Romanée-Conti Romanée-Conti" 2015 года</p>
+            </div>
+
+            <div class="dish" data-price="4500">
+                <h2>Бордоское вино</h2>
+                <p>"Château Margaux" 2016 года</p>
+            </div>
+
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+        </div>
+<div class="footer">
+    <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+</div> 
+</body>
+</html>
+
+
+

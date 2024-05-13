@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+  @font-face {
+    font-family: "InterLight";
+    src: url("./Inter-Light.otf");
+  }
+  body {
+    font-family: "InterLight";
+    background-color: #f4f4e6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .fon {
+    background-color: #dcc7b5;
+  }
+
+  .fkont{
+    width: 100%;
+    height: 300px;
+  }
+
+  h1 {
+    color: #2b070b;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 1400px;
+  }
+  
+  .kont p {
+    color: #2b070b;
+    font-size: 15px;
+    margin: 5px;
+    width: 1270px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+  
+  .contact-info {
+    width: 1350px;
+    font-size: 15px;
+    margin: 20px auto;
+    margin-top: 50px;
+  }
+
+  .contact-info p {
+    color: #2b070b;
+  }
+  
+  #map {
+    width: 1470px;
+    height: 600px;
+    margin: 10px auto;
+  }
+  .footer1 {
+  background-color: #2b070b;
+  text-align: center;
+  padding: 10px 0;
+  }
+
+  .footer1 p{
+    color: #fff;
+  }
+
+  /* Стили для устройств с шириной экрана менее 768px (например, для телефонов) */
+@media only screen and (max-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под мобильные устройства здесь */
+    /* Например: */
+    .header {
+        font-size: 16px; /* Уменьшение размера шрифта для заголовка */
+    }
+}
+
+/* Стили для устройств с шириной экрана от 768px и выше (например, для компьютеров) */
+@media only screen and (min-width: 768px) {
+    /* Добавьте ваш код CSS для адаптации дизайна под компьютеры здесь */
+    /* Например: */
+    .header {
+        font-size: 24px; /* Увеличение размера шрифта для заголовка */
+    }
+}
+</style>
+</head>
+<body class="fon">
+  <header >
+    <ul class="navigation" color: #722F37;>
+        <li><a href="О нас.html">О нас</a></li>
+        <li><a href="Меню.html">Меню</a></li>
+        <a href="сайт.html">
+            <img src="img/лого_икон.svg" alt="Лого" />
+          </a>
+        <li><a href="Отзывы.html">Отзывы</a></li>
+        <li><a href="Контакты.html">Контакты</a></li>
+        <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
+    </ul>
+</header>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Зарезервировать</h1>
+        <form id="bookingForm">
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required><br>
+            
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required><br>
+            
+            <label for="preferences">Пожелания:</label>
+            <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+            
+            <label for="location">Расположение стола:</label>
+            <select id="location" name="location">
+            
+            <option value="window">У окна</option>
+            <option value="quiet">Спокойное место</option>
+            <option value="bar">У барной стойки</option>
+            </select><br>
+            
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
+  <div class="kont">
+    <img class="fkont" src="img/высота.jpg" alt="Лого" />
+    <h1>Контакты</h1>
+    
+    <div class="contact-info">
+      <p>Москва, улица Свободы, дом 40</p>
+    </div>
+    
+    <div class="contact-info">
+      <p>+7 499 456 7890</p>
+    </div>
+    
+    <div class="contact-info">
+      <p> Электронная почта: vg@restaurant.com</p>
+    </div>
+    <div class="contact-info">
+      <p>СМИ: pr@vg.com</p>
+    </div>
+
+    <div id="map"></div>
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ваш_ключ_api"></script>
+  <script>
+      // Инициализация карты
+      ymaps.ready(init);
+
+      function init() {
+          // Создание карты
+          var myMap = new ymaps.Map("map", {
+              center: [55.844773, 37.456936], // Координаты центра карты
+              zoom: 15 // Масштаб карты
+          });
+
+          // Добавление метки на карту
+          var myPlacemark = new ymaps.Placemark([55.844773, 37.456936], {
+              hintContent: "Ресторан VG",
+              balloonContent: "Ресторан VG"
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+      }
+  </script>
+ <div class="footer">
+  <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+</div> 
+</body>
+</html>
+
+
+
