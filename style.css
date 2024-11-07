@@ -1,5 +1,12 @@
+@font-face { 
+  font-family: "Ebbe Thin"; 
+  src: 
+    url("/fonts/EbbeThin-Regular.woff2") format("woff2"), 
+    url("/fonts/EbbeThin-Regular.woff") format("woff");  
+}
+
 body {
-  font-family: "Roboto";
+  font-family: "Ebbe Thin";
 }
 
 * {
