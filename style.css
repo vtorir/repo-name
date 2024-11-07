@@ -1,10 +1,5 @@
-@font-face {
-  font-family: "InterLight";
-  src: url("./Inter-Light.otf");
-}
-
 body {
-  font-family: "InterLight";
+  font-family: "Roboto";
 }
 
 * {
