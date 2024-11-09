@@ -1,0 +1,63 @@
+body { 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  background-color: #f8f8f8; 
+  margin: 0; 
+  padding: 0; 
+  text-align: center; 
+} 
+
+.fon { 
+  background-color: #dcc7b5; 
+} 
+
+.nachalo { 
+  color: #2b070b; 
+  font-size: 45px; 
+  margin-top: 50px; 
+  width: 1400px; 
+} 
+
+.carousel { 
+  position: relative; 
+  overflow: hidden; 
+  margin: auto; 
+  max-width: 800px; 
+} 
+
+.carousel-images { 
+  display: flex; 
+  transition: transform 0.5s ease; 
+} 
+
+.carousel-image { 
+  min-width: 100%; 
+  width:100%;
+  box-sizing: border-box;
+   
+} 
+
+.carousel-caption { 
+  color: #2b070b; 
+  font-size: 18px; 
+  margin-top: 10px; 
+} 
+
+.button { 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: none; 
+  cursor: pointer; 
+  padding: 10px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+} 
+
+.prev { 
+  left: 10px; 
+} 
+
+.next { 
+  right: 10px; 
+} 

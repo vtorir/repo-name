@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-<div id="like_button_container"></div>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,7 @@
 </head>
 <body class="fon">
     <header >
-        <ul class="navigation" color: #722F37;>
+        <div class="navigation" color: #722F37;>
             <li><a href="o nas.html">О нас</a></li>
             <li><a href="menu.html">Меню</a></li>
             <a href="index.html">
@@ -19,7 +18,7 @@
             <li><a href="otzivi.html">Отзывы</a></li>
             <li><a href="konakt.html">Контакты</a></li>
             <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
-        </ul>
+        </div>
     </header>
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -65,7 +64,7 @@
         <section>
             <h1 class="nachal">О НАС</h1>
             
-            <div class="image-containe">
+            <div class="image-containe" id="firstContainer">
                 <img class="image" src="img/вика.jpg" alt="О нас">
                 <div class="text-container">
                     <p class="text1">Добро пожаловать в "VG" - ресторан, где встречаются высокая кухня и роскошное вино. Здесь вы откроете для себя уникальное сочетание гастрономических изысков и непревзойденного внимания к каждому гостю.</p>
@@ -74,7 +73,7 @@
                 </div>
             </div>
         
-            <div class="image-container2">
+            <div class="image-container2" id="secondContainer">
                 <div class="text-containe">
                     <p class="text4">Наше меню предлагает уникальные гастрономические изыски, вдохновленные мировыми кулинарными традициями. Вино нашей тщательно подобранной карты подчеркнет вкус каждого блюда. </p>
                     <p class="text5">Ощутите искусство в каждом приеме и окунитесь в мир неповторимых вкусов в "VG".</p>
@@ -88,14 +87,14 @@
                 <img src="img/м-еда.png" alt="фото меню">
                 <div class="text-menu">
                     <p>вы не забудете это никогда</p>
-                    <h1>НАШЕ МЕНЮ</h1>
+                    <h1>ПРОСТО ПОПРОБУЙТЕ</h1>
                 </div>  
             </div>
         </section>
         <section class="menubar">
             <h1 class="m1"><a href="menu.html">Меню</a></h1>
         </section>
-
+    </main>
 <div class="footer">
     <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
 </div> 

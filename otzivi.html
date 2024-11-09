@@ -5,164 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отзывы</title>
     <link rel="stylesheet" href="./style.css">
-<style>
-  @font-face {
-    font-family: "InterLight";
-    src: url("./Inter-Light.otf");
-  }
-  body {
-    font-family: "InterLight";
-    background-color: #f4f4e6;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .fon {
-    background-color: #dcc7b5;
-  }
-
-  header h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-    min-height: 100vh;
-}
-
-.review-form {
-    max-width: 600px;
-    margin: 0 auto 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.review-form h2 {
-    margin-top: 0;
-    font-size: 24px;
-}
-
-.otz{
-  max-width: 600px;
-  margin: 0 auto 20px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.review-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.review-form input[type="text"],
-.review-form input[type="email"],
-.review-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #dcc7b5;
-    border-radius: 5px;
-}
-
-.review-form textarea {
-    height: 100px;
-}
-
-.review-form button {
-    background-color: #2b070b;
-    color: #dcc7b5;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.review-form button:hover {
-    background-color: #722F37;
-}
-
-.reviews {
-  width: 80%;
-  margin: 20px auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.reviews-container {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.review-list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.review {
-  flex: 0 0 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.review h3 {
-  margin-bottom: 10px;
-}
-
-.review p {
-  margin: 0;
-}
-
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #dcc7b5;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Стили для устройств с шириной экрана менее 768px (например, для телефонов) */
-@media only screen and (max-width: 768px) {
-    /* Добавьте ваш код CSS для адаптации дизайна под мобильные устройства здесь */
-    /* Например: */
-    .header {
-        font-size: 16px; /* Уменьшение размера шрифта для заголовка */
-    }
-}
-
-/* Стили для устройств с шириной экрана от 768px и выше (например, для компьютеров) */
-@media only screen and (min-width: 768px) {
-    /* Добавьте ваш код CSS для адаптации дизайна под компьютеры здесь */
-    /* Например: */
-    .header {
-        font-size: 24px; /* Увеличение размера шрифта для заголовка */
-    }
-}
-  
-</style>
+    <link rel="stylesheet" href="./otzivi.css">
 </head>
 <body class="fon">
   <header >
@@ -224,30 +67,27 @@ main {
           </form>
       </section>
 
-      <section class="reviews">
-        <h1 class="otz">Отзывы наших гостей</h1>
-        <div class="reviews-container">
-            <div class="review-list">
-                <div class="review">
-                    <h3>Иван</h3>
-                    <p>Отличный ресторан с изысканными блюдами и прекрасным обслуживанием!</p>
-                </div>
-                <div class="review">
-                    <h3>Мария</h3>
-                    <p>Прекрасное место для романтического ужина! Будем рекомендовать друзьям!</p>
-                </div>
-                <div class="review">
-                    <h3>Алексей</h3>
-                    <p>Отличная атмосфера и вкуснейшие блюда! Обязательно вернемся снова!</p>
-                </div>
-                <div class="review">
-                  <h3>Александра</h3>
-                  <p>Шикарный ресторан и безумно вкусная еда и напитки. Рекомендую всем!</p>
-                </div>
+      <div class="reviews-section">
+        <h1>Отзывы наших гостей</h1>
+        <div class="review-cards">
+            <div class="review-card">
+                <img src="img/ава1.webp" alt="Вероника">
+                <h3>Вероника Марченко</h3>
+                <p>Персонал был на высоте, еда восхитительна.</p>
+            </div>
+            <div class="review-card">
+                <img src="img/ава2.webp" alt="Анна">
+                <h3>Анна Балых</h3>
+                <p>Спасибо большое за красивую подачу и вкусный ужин.</p>
+            </div>
+            <div class="review-card">
+                <img src="img/ава3.webp" alt="Петр">
+                <h3>Петр Качан</h3>
+                <p>Были впервые, вернемся еще. Красивый интерьер, качественная продукция, персонал квалифицированный. Рекомендую всем.</p>
             </div>
         </div>
-        <button class="prev-btn">Предыдущий</button>
-        <button class="next-btn">Следующий</button>
+    
+        </div>
     </section>
     <script src="script.js"></script>
     </main>

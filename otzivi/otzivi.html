@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./otzivi.css">
+</head>
+<body class="fon">
+  <header >
+    <ul class="navigation" color: #722F37;>
+        <li><a href="o nas.html">О нас</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <a href="index.html">
+            <img src="img/лого_икон.svg" alt="Лого" />
+          </a>
+        <li><a href="otzivi.html">Отзывы</a></li>
+        <li><a href="konakt.html">Контакты</a></li>
+        <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
+    </ul>
+</header>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Зарезервировать</h1>
+        <form id="bookingForm">
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required><br>
+            
+            <label for="time">Время:</label>
+            <input type="time" id="time" name="time" required><br>
+            
+            <label for="preferences">Пожелания:</label>
+            <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+            
+            <label for="location">Расположение стола:</label>
+            <select id="location" name="location">
+            
+            <option value="window">У окна</option>
+            <option value="quiet">Спокойное место</option>
+            <option value="bar">У барной стойки</option>
+            </select><br>
+            
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+  <body>
+    <main>
+      <section class="review-form">
+          <h2>Оставьте ваш отзыв</h2>
+          <form action="#" method="POST">
+              <label for="name">Ваше имя:</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Ваш email:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="message">Ваш отзыв:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              
+              <button type="submit">Отправить</button>
+          </form>
+      </section>
+
+      <div class="reviews-section">
+        <h1>Отзывы наших гостей</h1>
+        <div class="review-cards">
+            <div class="review-card">
+                <img src="img/ава1.webp" alt="Вероника">
+                <h3>Вероника Марченко</h3>
+                <p>Персонал был на высоте, еда восхитительна.</p>
+            </div>
+            <div class="review-card">
+                <img src="img/ава2.webp" alt="Анна">
+                <h3>Анна Балых</h3>
+                <p>Спасибо большое за красивую подачу и вкусный ужин.</p>
+            </div>
+            <div class="review-card">
+                <img src="img/ава3.webp" alt="Петр">
+                <h3>Петр Качан</h3>
+                <p>Были впервые, вернемся еще. Красивый интерьер, качественная продукция, персонал квалифицированный. Рекомендую всем.</p>
+            </div>
+        </div>
+    
+        </div>
+    </section>
+    <script src="script.js"></script>
+    </main>
+  </body>
+  <div class="footer">
+    <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+</div> 
+</body>
+</html>
+
+
+
