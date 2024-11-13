@@ -4,19 +4,20 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>О нас</title> 
-    <link rel="stylesheet" href="./style.css"> 
-    <link rel="stylesheet" href="./onas.css">
+    <link rel="stylesheet" href="../script.js"> 
+    <link rel="stylesheet" href="../aboutus/aboutus.css">
+    <link rel="stylesheet" href="../style.css">
 </head> 
 <body class="fon"> 
 <header> 
     <ul class="navigation" color: #722F37;> 
-        <li><a href="o nas.html">О нас</a></li> 
-        <li><a href="menu.html">Меню</a></li> 
-        <a href="index.html"> 
-            <img src="img/лого_икон.svg" alt="Лого" /> 
+        <li><a href="../aboutus/aboutus.html">О нас</a></li> 
+        <li><a href="../menu/menu.html">Меню</a></li> 
+        <a href="../index.html"> 
+            <img src="../лого_икон.svg" alt="Лого" /> 
         </a> 
-        <li><a href="otzivi.html">Отзывы</a></li> 
-        <li><a href="konakt.html">Контакты</a></li> 
+        <li><a href="../feedback/feedback.html">Отзывы</a></li> 
+        <li><a href="../kontakt/konakt.html">Контакты</a></li> 
         <div class="okno"><button id="openModalBtn">Зарезервировать</button></div> 
     </ul> 
 </header> 
@@ -52,32 +53,32 @@
 <div class="carousel"> 
     <div class="carousel-images"> 
         <div class="carousel-image">
-            <img src="img/рестико.jpg" alt="Фото 1" class="image1">
+            <img src="../рестико.jpg" alt="Фото 1" class="image1">
             <div class="carousel-caption">Манящая атмосфера</div>
         </div>
         <div class="carousel-image">
-            <img src="img/рестико1.webp" alt="Фото 2" class="image1">
+            <img src="../рестико1.webp" alt="Фото 2" class="image1">
             <div class="carousel-caption">Веет уютом</div>
         </div>
         <div class="carousel-image">
-            <img src="img/рестико2.webp" alt="Фото 3" class="image1">
+            <img src="../рестико2.webp" alt="Фото 3" class="image1">
             <div class="carousel-caption">Большой ассортимент</div>
 
           </div>
           <div class="carousel-image">
-              <img src="img/рестико3.webp" alt="Фото 4" class="image1">
+              <img src="../рестико3.webp" alt="Фото 4" class="image1">
               <div class="carousel-caption">Насыщенный вкус</div>
           </div>
           <div class="carousel-image">
-              <img src="img/повар.png" alt="Фото 5" class="image1">
+              <img src="../повар.png" alt="Фото 5" class="image1">
               <div class="carousel-caption">Квалифицированный персонал</div>
           </div>
           <div class="carousel-image">
-              <img src="img/рестико6.webp" alt="Фото 7" class="image1">
+              <img src="../рестико6.webp" alt="Фото 7" class="image1">
               <div class="carousel-caption">Качественный продукт</div>
           </div>
           <div class="carousel-image">
-              <img src="img/ресторан.webp" alt="Фото 8" class="image1">
+              <img src="../ресторан.webp" alt="Фото 8" class="image1">
               <div class="carousel-caption">Мы ждём вас всегда</div>
           </div>
       </div> 
@@ -107,9 +108,7 @@
           const offset = -currentSlide * 100; 
           document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`; 
       } 
-  </script> 
-  
-  <script src="script.js"></script> 
+  </script>  
   </body> 
   </html>
   
