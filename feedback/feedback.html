@@ -8,18 +8,44 @@
     <link rel="stylesheet" href="./feedback.css">
 </head>
 <body class="fon">
-    <header >
-        <ul class="navigation" color: #722F37;>
+    <ul>
+        <div class="navigation" color: #722F37;>
             <li><a href="../aboutus/aboutus.html">О нас</a></li>
             <li><a href="../menu/menu.html">Меню</a></li>
             <a href="../index.html">
                 <img src="../лого_икон.svg" alt="Лого" />
-            </a>
-            <li><a href="../feedback/feedback.html">Отзывы</a></li>
+              </a>
+            <li><a href="./feedback/feedback.html">Отзывы</a></li>
             <li><a href="../kontakt/konakt.html">Контакты</a></li>
-            <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
-        </ul>
-    </header>
+            <li class="okno"><button id="openModalBtn">Зарезервировать</button></li>
+        </div>
+    </ul>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Зарезервировать</h1>
+            <form id="bookingForm">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required><br>
+                
+                <label for="time">Время:</label>
+                <input type="time" id="time" name="time" required><br>
+                
+                <label for="preferences">Пожелания и номер телефона:</label>
+                <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+                
+                <label for="location">Расположение стола:</label>
+                <select id="location" name="location">
+                
+                <option value="window">У окна</option>
+                <option value="quiet">Спокойное место</option>
+                <option value="bar">У барной стойки</option>
+                </select><br>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
 
 
 
@@ -43,7 +69,6 @@
             </div>
         </div>
     </div>
-    <body>
         <main>
           <section class="review-form">
               <h2>Оставьте ваш отзыв</h2>
@@ -64,7 +89,6 @@
 
     </section>
     </main>
-  </body>
   <div class="footer">
     <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
 </div> 
