@@ -20,4 +20,21 @@ window.onclick = function(event) {
     }
 }
 
+let currentSlide = 0; 
+  
+function moveSlide(direction) { 
+    const slides = document.querySelectorAll('.carousel-image'); 
+    const totalSlides = slides.length; 
+
+    currentSlide += direction; 
+
+    if (currentSlide < 0) { 
+        currentSlide = totalSlides - 1; 
+    } else if (currentSlide >= totalSlides) { 
+        currentSlide = 0; 
+    } 
+
+    const offset = -currentSlide * 100; 
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`; 
+} 
 

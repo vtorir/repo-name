@@ -4,23 +4,20 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>О нас</title> 
-    <link rel="stylesheet" href="../script.js"> 
     <link rel="stylesheet" href="../aboutus/aboutus.css">
     <link rel="stylesheet" href="../style.css">
 </head> 
-<body class="fon"> 
-<header> 
-    <ul class="navigation" color: #722F37;> 
-        <li><a href="../aboutus/aboutus.html">О нас</a></li> 
-        <li><a href="../menu/menu.html">Меню</a></li> 
+<body class="fon">  
+    <ul class="navigation"> 
         <a href="../index.html"> 
             <img src="../лого_икон.svg" alt="Лого" /> 
         </a> 
+        <li><a href="../aboutus/aboutus.html">О нас</a></li> 
+        <li><a href="../menu/menu.html">Меню</a></li> 
         <li><a href="../feedback/feedback.html">Отзывы</a></li> 
         <li><a href="../kontakt/konakt.html">Контакты</a></li> 
         <div class="okno"><button id="openModalBtn">Зарезервировать</button></div> 
-    </ul> 
-</header> 
+    </ul>  
 
 <div id="myModal" class="modal"> 
     <div class="modal-content"> 
@@ -47,6 +44,8 @@
         </form> 
     </div> 
 </div> 
+
+<script src="../script.js"></script>
 
 <h1 class="nachalo">О нас</h1> 
 
@@ -89,26 +88,7 @@
   <div class="footer"> 
       <p>&copy; 2024 Ресторан "VG". Все права защищены.</p> 
   </div>  
-  
-  <script> 
-      let currentSlide = 0; 
-  
-      function moveSlide(direction) { 
-          const slides = document.querySelectorAll('.carousel-image'); 
-          const totalSlides = slides.length; 
-  
-          currentSlide += direction; 
-  
-          if (currentSlide < 0) { 
-              currentSlide = totalSlides - 1; 
-          } else if (currentSlide >= totalSlides) { 
-              currentSlide = 0; 
-          } 
-  
-          const offset = -currentSlide * 100; 
-          document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`; 
-      } 
-  </script>  
+ 
   </body> 
   </html>
   
