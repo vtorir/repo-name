@@ -203,6 +203,48 @@ button[type="submit"]:hover {
   text-align: center;
   font-size: 2rem;
   margin: 2rem 0;
+  color: #2b070b;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  }
+  
+.about-item {
+  display: flex;
+  align-items: center;
+  opacity: 0; /* Начально скрыто */
+  transform: translateX(-50px); /* Сдвинуть вбок */
+  animation: slideIn 5s forwards; /* Анимация */
+}
+  
+.about-item.reversed {
+  flex-direction: row-reverse;
+}
+  
+@keyframes slideIn {
+  from {
+  opacity: 0;
+  transform: translateX(-50px);
+  }
+  to {
+  opacity: 1;
+  transform: translateX(0);
+  }
+}
+  
+.text-container {
+  margin: 0 1rem;
+  flex: 1; /* Текст занимает максимум доступного места */
+  color: #2b070b;
+}
+  
+.image {
+  width: 300px;
+  height: auto;
+  padding: 20px;
 }
 
 .text-container, .image-containe {
@@ -211,19 +253,14 @@ button[type="submit"]:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 1rem;
 }
 
 .text-container p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-align: center;
   color: #2b070b;
 }
 
-.image {
-  width: 300px;
-  height: auto;
-}
 
 /* --- Меню --- */
 .image-container1 {
@@ -290,6 +327,36 @@ button[type="submit"]:hover {
 
   .text-container p {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .navigation {
+    font-size: 2rem;
+    margin: 5rem;
+  }
+
+  .okno button {
+    font-size: 2rem;
+  }
+
+
+  .main-block {
+    left: 10%;
+    width: 80%;
+    text-align: center;
+  }
+
+  .main-block .main-title {
+    font-size: 3.4rem;
+  }
+
+  .main-block .main-text {
+    font-size: 2.4rem;
+  }
+
+  .text-container p {
+    font-size: 2rem;
   }
 }
 

@@ -38,3 +38,5 @@ function moveSlide(direction) {
     document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`; 
 } 
 
+
+
