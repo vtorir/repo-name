@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./wine.css">
+</head>
+<body class="fon">
+        <ul class="navigation">
+            <a href="../index.html">
+                <img src="../logo.png" alt="Лого" />
+              </a>
+              <li><a href="../menu/menu.html">Меню</a></li>
+            <li><a href="../wine/wine.html">Вино</a></li>
+            <li><a href="../feedback/feedback.html">Отзывы</a></li>
+            <li><a href="../kontakt/konakt.html">Контакты</a></li>
+            <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
+        </ul>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Зарезервировать</h1>
+            <form id="bookingForm">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required><br>
+                
+                <label for="time">Время:</label>
+                <input type="time" id="time" name="time" required><br>
+                
+                <label for="preferences">Пожелания:</label>
+                <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+                
+                <label for="location">Расположение стола:</label>
+                <select id="location" name="location">
+                
+                <option value="window">У окна</option>
+                <option value="quiet">Спокойное место</option>
+                <option value="bar">У барной стойки</option>
+                </select><br>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+
+        <h1 class="vino">Вино</h1>
+        <div class="menu">
+            <div class="dish" data-price="5500">
+                <h2>Шампанское</h2>
+                <p>"Dom Pérignon Vintage" 2010 года</p>
+            </div>
+
+            <div class="dish" data-price="5000">
+                <h2>Бургундское вино </h2>
+                <p>"Domaine de la Romanée-Conti Romanée-Conti" 2015 года</p>
+            </div>
+
+            <div class="dish" data-price="4500">
+                <h2>Бордоское вино</h2>
+                <p>"Château Margaux" 2016 года</p>
+            </div>
+
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+            <div class="dish" data-price="4000">
+                <h2>Тосканское вино</h2>
+                <p>"Sassicaia" 2017 года</p>
+            </div>
+        </div>
+<div class="footer">
+    <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+</div> 
+<script src="../script.js"></script>
+</body>
+</html>
+
+
+

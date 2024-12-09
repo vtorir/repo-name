@@ -22,7 +22,8 @@ html, body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Для полной высоты страницы */
+  min-height: 300vh; /* Для полной высоты страницы */
+  
 }
 
 main {
@@ -199,18 +200,7 @@ button[type="submit"]:hover {
 }
 
 /* --- О нас --- */
-.nachal {
-  text-align: center;
-  font-size: 2rem;
-  margin: 2rem 0;
-  color: #2b070b;
-}
 
-.about-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  }
   
 .about-item {
   display: flex;
@@ -242,9 +232,16 @@ button[type="submit"]:hover {
 }
   
 .image {
-  width: 300px;
+  width: 500px;
   height: auto;
-  padding: 20px;
+  padding: 50px;
+  margin: 50px;
+}
+
+.image1 {
+  width: 500px;
+  height: auto;
+  padding: 50px;
 }
 
 .text-container, .image-containe {
@@ -305,12 +302,13 @@ button[type="submit"]:hover {
   background-color: #2b070b;
   color: #fff;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 /* --- Медиазапросы --- */
 /* Планшеты */
 @media only screen and (max-width: 1200px) {
+
   .main-block {
     left: 10%;
     width: 80%;
@@ -331,6 +329,12 @@ button[type="submit"]:hover {
 }
 
 @media only screen and (min-width: 2000px) {
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 105vh; /* Для полной высоты страницы */
+  }
   .navigation {
     font-size: 2rem;
     margin: 5rem;
