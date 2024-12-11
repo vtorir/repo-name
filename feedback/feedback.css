@@ -1,13 +1,14 @@
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  display: flex; /* Используем Flexbox для размещения элементов */
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  height: 100vh; /* Высота на весь экран */
+  margin: 0; /* Убираем отступы */
 }
 
 .fon {
   background-color: #dcc7b5;
+  flex-grow: 1;
 }
 
 header h1 {
@@ -25,6 +26,7 @@ padding: 20px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 .review-form h2 {
@@ -39,6 +41,9 @@ max-width: 600px;
 margin: 0 auto 20px;
 padding: 20px;
 border-radius: 10px;
+}
+.reviews-section h1{
+  text-align: center;
 }
 
 .review-form label {
