@@ -20,13 +20,13 @@ padding: 20px;
 }
 
 .review-form {
+  text-align: center;
   max-width: 600px;
-  margin-left: 400px;
+  margin-left: 600px;
   background-color: #2b070b;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
 }
 
 .review-form h2 {
@@ -114,31 +114,6 @@ margin-bottom: 10px;
 margin: 0;
 }
 
-.prev-btn,
-.next-btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background-color: rgba(0, 0, 0, 0.5);
-color: #dcc7b5;
-border: none;
-padding: 10px 20px;
-cursor: pointer;
-transition: background-color 0.3s;
-}
-
-.prev-btn {
-left: 0;
-}
-
-.next-btn {
-right: 0;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-background-color: rgba(0, 0, 0, 0.8);
-}
 
 
 
@@ -185,4 +160,21 @@ background-color: rgba(0, 0, 0, 0.8);
   font-size: 16px;
   color: #2b070b;
   line-height: 1.5;
+}
+
+/* Адаптивные стили для мобильных устройств (до 767px) */
+@media only screen and (max-width: 767px) {
+  .review-form {
+    max-width: 600px;
+    margin-left: 10px; 
+  }
+
+}
+
+/* Адаптивные стили для мобильных устройств (до 767px) */
+@media only screen and (min-width: 2000px) {
+  .review-form {
+    max-width: 600px;
+    margin-left: 1200px; 
+  }
 }

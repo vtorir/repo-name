@@ -8,44 +8,48 @@
     <link rel="stylesheet" href="./wine.css">
 </head>
 <body class="fon">
-        <ul class="navigation">
-            <a href="../index.html">
-                <img src="../logo.png" alt="Лого" />
-              </a>
-              <li><a href="../menu/menu.html">Меню</a></li>
-            <li><a href="../wine/wine.html">Вино</a></li>
-            <li><a href="../feedback/feedback.html">Отзывы</a></li>
-            <li><a href="../kontakt/konakt.html">Контакты</a></li>
-            <div class="okno"><button id="openModalBtn">Зарезервировать</button></div>
-        </ul>
+    <header>
+        <div class="navigation">
+            <a class="logo" href="../index.html">
+                <img src="../logo.png" alt="Лого">
+            </a>
+            <ul>
+                <li><a href="../menu/menu.html">Меню</a></li>
+                <li><a href="../wine/wine.html">Вино</a></li>
+                <li><a href="../feedback/feedback.html">Отзывы</a></li>
+                <li><a href="../kontakt/konakt.html">Контакты</a></li>
+            </ul>
+            <div class="okno">
+                <button id="openModalBtn">Зарезервировать</button>
+            </div>
+        </div>
+    </header>
 
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h1>Зарезервировать</h1>
+            <h1 class="modal-title">Зарезервировать</h1>
             <form id="bookingForm">
                 <label for="date">Дата:</label>
-                <input type="date" id="date" name="date" required><br>
+                <input type="date" id="date" name="date" required>
                 
                 <label for="time">Время:</label>
-                <input type="time" id="time" name="time" required><br>
+                <input type="time" id="time" name="time" required>
                 
-                <label for="preferences">Пожелания:</label>
-                <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea><br>
+                <label for="preferences">Пожелания и номер телефона:</label>
+                <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea>
                 
                 <label for="location">Расположение стола:</label>
                 <select id="location" name="location">
-                
-                <option value="window">У окна</option>
-                <option value="quiet">Спокойное место</option>
-                <option value="bar">У барной стойки</option>
-                </select><br>
+                    <option value="window">У окна</option>
+                    <option value="quiet">Спокойное место</option>
+                    <option value="bar">У барной стойки</option>
+                </select>
                 
                 <button type="submit">Отправить</button>
             </form>
         </div>
     </div>
-
 
         <h1 class="vino">Вино</h1>
         <div class="menu">
