@@ -180,12 +180,11 @@ button[type="submit"]:hover {
 
 .main-block {
   color: #f4f4e6;
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
   position: absolute;
-  left: 20%;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 5%;
+  top: 60%;
   max-width: 500px;
 }
 
@@ -312,23 +311,61 @@ button[type="submit"]:hover {
 /* --- Медиазапросы --- */
 /* Планшеты */
 @media only screen and (max-width: 1200px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 140vh; /* Для полной высоты страницы */ 
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .foto {
+    height: 500px;
+  }
 
   .main-block {
-    left: 10%;
-    width: 80%;
-    text-align: center;
+    width: 90%;
+    margin-top: -15%;
+    margin-left: 100px;
   }
 
-  .main-block .main-title {
-    font-size: 30px;
+  .main__foto {
+    height: 500px;
+    filter: brightness(0.4);
   }
 
-  .main-block .main-text {
-    font-size: 18px;
+  .image {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  .image1 {
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
   }
 
   .text-container p {
-    font-size: 16px;
+    font-size: 1.5rem;
+  }
+
+  .text-menu h1 {
+    font-size: 1.5rem;
+  }
+  
+  .text-menu p {
+    font-size: 1rem;
+  }
+  .menubar a{
+    font-size: 2rem;
+  }
+  .footer p {
+    font-size: 1rem;
   }
 }
 
@@ -340,11 +377,14 @@ button[type="submit"]:hover {
     min-height: 105vh; /* Для полной высоты страницы */
   }
   .navigation {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  .navigation img {
+    width: 150px;
   }
 
   .okno button {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
 
@@ -352,6 +392,7 @@ button[type="submit"]:hover {
     left: 10%;
     width: 80%;
     text-align: center;
+    top: 40%;
   }
 
   .main-block .main-title {
@@ -362,26 +403,95 @@ button[type="submit"]:hover {
     font-size: 2.4rem;
   }
 
+  .image {
+    width: 900px;
+    height: auto;
+    padding: 40px;
+    margin: 50px;
+  }
+  
+  .image1 {
+    width: 900px;
+    height: auto;
+    padding: 40px;
+    margin: 50px;
+  }
+
   .text-container p {
+    font-size: 2.8rem;
+  }
+
+  .text-menu h1 {
+    font-size: 4rem;
+  }
+  
+  .text-menu p {
+    font-size: 2.5rem;
+  }
+  .menubar a{
+    font-size: 4rem;
+  }
+  .footer p {
     font-size: 2rem;
   }
 }
 
+
 /* Мобильные устройства */
 @media only screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Для полной высоты страницы */ 
+  }
+
   .navigation {
     flex-direction: column;
   }
 
+  .foto {
+    height: 500px;
+  }
+
   .main-block {
     width: 90%;
+    margin-top: -20%;
   }
 
   .main__foto {
     height: 500px;
+    filter: brightness(0.5);
+  }
+
+  .image {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    margin: 30px;
+  }
+  
+  .image1 {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    margin: 30px;
   }
 
   .text-container p {
-    font-size: 14px;
+    font-size: 1rem;
+  }
+
+  .text-menu h1 {
+    font-size: 1.2rem;
+  }
+  
+  .text-menu p {
+    font-size: 0.8rem;
+  }
+  .menubar a{
+    font-size: 1.5rem;
+  }
+  .footer p {
+    font-size: 1rem;
   }
 }
