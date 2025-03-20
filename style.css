@@ -148,7 +148,7 @@ input[type="date"], input[type="time"], select, textarea {
 button[type="submit"] {
   padding: 0.625rem;
   border-radius: 5px;
-  background-color: #800020;
+  background-color: #321011;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -156,7 +156,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #D4AF37;
+  background-color: #45161c;
 }
 
 /* --- Главная страница --- */
