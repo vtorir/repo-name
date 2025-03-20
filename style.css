@@ -78,7 +78,7 @@ a {
 .okno button {
   font-size: 1rem;
   color: #F5F5DC;
-  background-color: #800020;
+  background-color: #321011;
   border: none;
   padding: 0.625rem 0.9375rem;
   cursor: pointer;
@@ -86,7 +86,7 @@ a {
 }
 
 .okno button:hover {
-  background-color: #D4AF37;
+  background-color: #45161c;
 }
 
 /* --- Модальное окно --- */
@@ -144,6 +144,7 @@ input[type="date"], input[type="time"], select, textarea {
   border-radius: 5px;
   border: 1px solid #551414;
 }
+ /*кнопка*/
 
 button[type="submit"] {
   padding: 0.625rem;
