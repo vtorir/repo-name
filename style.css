@@ -16,7 +16,7 @@ html, body {
 
 /* Универсальный фон */
 .fon {
-  background-color: #dcc7b5;
+  background-color: #2b070b;
 }
 
 .wrapper {
@@ -33,7 +33,7 @@ main {
 /* --- Навигация --- */
 .navigation {
   font-size: 1.26rem;
-  color: #2b070b;
+  color: #F5F5DC;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,7 @@ main {
 .navigation li {
   position: relative;
   padding: 0.625rem 1.25rem;
-  color: #2b070b;
+  color: #F5F5DC;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -61,7 +61,7 @@ main {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #2b070b;
+  background-color: #F5F5DC;
   transition: width 0.3s, left 0.3s;
 }
 
@@ -77,8 +77,8 @@ a {
 
 .okno button {
   font-size: 1rem;
-  color: #dcc7b5;
-  background-color: #2b070b;
+  color: #F5F5DC;
+  background-color: #800020;
   border: none;
   padding: 0.625rem 0.9375rem;
   cursor: pointer;
@@ -86,7 +86,7 @@ a {
 }
 
 .okno button:hover {
-  background-color: #664547;
+  background-color: #D4AF37;
 }
 
 /* --- Модальное окно --- */
@@ -106,7 +106,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #dcc7b5;
+  background-color: #2b070b;
   padding: 1.25rem;
   border-radius: 10px;
   width: 400px;
@@ -115,7 +115,7 @@ a {
 
 .modal-title {
   text-align: center;
-  color: #2b070b;
+  color: #F5F5DC;
   margin-bottom: 1.25rem;
 }
 
@@ -123,7 +123,7 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #aaa;
+  color: #F5F5DC;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -148,7 +148,7 @@ input[type="date"], input[type="time"], select, textarea {
 button[type="submit"] {
   padding: 0.625rem;
   border-radius: 5px;
-  background-color: #2b070b;
+  background-color: #800020;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -156,7 +156,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #1a0405;
+  background-color: #D4AF37;
 }
 
 /* --- Главная страница --- */
@@ -179,7 +179,7 @@ button[type="submit"]:hover {
 }
 
 .main-block {
-  color: #f4f4e6;
+  color: #F5F5DC;
   text-align: center;
   line-height: 1.5;
   position: absolute;
@@ -227,7 +227,7 @@ button[type="submit"]:hover {
 .text-container {
   margin: 0 1rem;
   flex: 1; /* Текст занимает максимум доступного места */
-  color: #2b070b;
+  color: #F5F5DC;
 }
   
 .image {
@@ -254,7 +254,7 @@ button[type="submit"]:hover {
 .text-container p {
   font-size: 1.25rem;
   text-align: center;
-  color: #2b070b;
+  color: #F5F5DC;
 }
 
 
@@ -287,18 +287,19 @@ button[type="submit"]:hover {
 
 .menubar .m1 {
   font-size: 2rem;
-  color: #2b070b;
+  color: #800020;
   text-align: center;
   transition: color 0.3s;
 }
 
 .menubar .m1:hover {
-  color: #664547;
+  color: #D4AF37;
 }
 
 /* --- Footer --- */
 .footer {
   background-color: #2b070b;
+  filter:brightness(0.8);
   color: #fff;
   text-align: center;
   padding: 10px;
