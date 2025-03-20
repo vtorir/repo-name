@@ -288,13 +288,13 @@ button[type="submit"]:hover {
 
 .menubar .m1 {
   font-size: 2rem;
-  color: #800020;
+  color: #321011;
   text-align: center;
   transition: color 0.3s;
 }
 
 .menubar .m1:hover {
-  color: #D4AF37;
+  color: #45161c;
 }
 
 /* --- Footer --- */
