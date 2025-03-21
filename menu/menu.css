@@ -1,3 +1,11 @@
+/*
+#110305 - текст,цвет, фон 
+#9C1C31 - активные кнопки 
+#FCEEF0 - когда надо белый, использовать этот цвет
+#450D15 - шапка, кнопки
+#781725 - неактивные кнопки, бордеры
+*/
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex; /* Используем Flexbox для размещения элементов */
@@ -7,22 +15,27 @@ body {
 }
 
 .fon {
-  background-color: #dcc7b5;
-  flex-grow: 1;
+  background-color: #450D15;
 }
+
+.fon1 {
+  background-color: #110305;
+}
+
 
 .res {
   text-align: center;
-  color: #2b070b;
+  color: #FCEEF0;
   margin-top: 50px;
   font-size: 40px;
+  font-weight: normal;
 }
 
 .menu {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 55px;
   gap: 20px;
   flex-grow: 1;
 }
@@ -39,12 +52,11 @@ body {
   box-shadow: 0 0 10px rgba(186, 16, 16, 0.1);
 }
 h2 {
-  color: #2b070b;
+  color: #FCEEF0;
   margin-top: 10px;
 }
-.menu p, 
-.vino p {
-  color: #2b070b;
+.menu p {
+  color: #FCEEF0;
 }
 .dish:hover {
   transform: scale(1.05); /* Немного увеличим размер блока при наведении */
@@ -65,9 +77,9 @@ h2 {
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(225, 147, 147, 0.8);
+  background-color: #9C1C31;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px;
   display: none;
   font-size: 14px;
 }

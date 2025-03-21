@@ -1,4 +1,13 @@
 /* --- Базовые стили --- */
+/*
+#110305 - текст,цвет, фон 
+#9C1C31 - активные кнопки 
+#FCEEF0 - когда надо белый, использовать этот цвет
+#450D15 - шапка, кнопки
+#781725 - неактивные кнопки, бордеры
+*/
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +25,7 @@ html, body {
 
 /* Универсальный фон */
 .fon {
-  background-color: #2b070b;
+  background-color: #110305;
 }
 
 .wrapper {
@@ -33,7 +42,7 @@ main {
 /* --- Навигация --- */
 .navigation {
   font-size: 1.26rem;
-  color: #F5F5DC;
+  color: #FCEEF0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +58,7 @@ main {
 .navigation li {
   position: relative;
   padding: 0.625rem 1.25rem;
-  color: #F5F5DC;
+  color: #FCEEF0;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -61,7 +70,7 @@ main {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #F5F5DC;
+  background-color: #9C1C31;
   transition: width 0.3s, left 0.3s;
 }
 
@@ -77,8 +86,8 @@ a {
 
 .okno button {
   font-size: 1rem;
-  color: #F5F5DC;
-  background-color: #321011;
+  color: #FCEEF0;
+  background-color: #781725;
   border: none;
   padding: 0.625rem 0.9375rem;
   cursor: pointer;
@@ -86,7 +95,7 @@ a {
 }
 
 .okno button:hover {
-  background-color: #45161c;
+  background-color: #9C1C31;
 }
 
 /* --- Модальное окно --- */
@@ -106,7 +115,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #2b070b;
+  background-color: #FCEEF0;
   padding: 1.25rem;
   border-radius: 10px;
   width: 400px;
@@ -115,7 +124,7 @@ a {
 
 .modal-title {
   text-align: center;
-  color: #F5F5DC;
+  color: #110305;
   margin-bottom: 1.25rem;
 }
 
@@ -123,7 +132,7 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #F5F5DC;
+  color: #FCEEF0;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -149,15 +158,15 @@ input[type="date"], input[type="time"], select, textarea {
 button[type="submit"] {
   padding: 0.625rem;
   border-radius: 5px;
-  background-color: #321011;
-  color: #fff;
+  background-color: #781725;
+  color: #FCEEF0;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
-  background-color: #45161c;
+  background-color: #9C1C31;
 }
 
 /* --- Главная страница --- */
@@ -180,7 +189,7 @@ button[type="submit"]:hover {
 }
 
 .main-block {
-  color: #F5F5DC;
+  color: #FCEEF0;
   text-align: center;
   line-height: 1.5;
   position: absolute;
@@ -228,7 +237,7 @@ button[type="submit"]:hover {
 .text-container {
   margin: 0 1rem;
   flex: 1; /* Текст занимает максимум доступного места */
-  color: #F5F5DC;
+  color: #FCEEF0;
 }
   
 .image {
@@ -255,7 +264,7 @@ button[type="submit"]:hover {
 .text-container p {
   font-size: 1.25rem;
   text-align: center;
-  color: #F5F5DC;
+  color: #FCEEF0;
 }
 
 
@@ -275,7 +284,7 @@ button[type="submit"]:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: #FCEEF0;
 }
 
 .text-menu h1 {
@@ -288,20 +297,20 @@ button[type="submit"]:hover {
 
 .menubar .m1 {
   font-size: 2rem;
-  color: #5c292b;
+  color: #781725;
   text-align: center;
   transition: color 0.3s;
 }
 
 .menubar .m1:hover {
-  color: #45161c;
+  color: #9C1C31;
 }
 
 /* --- Footer --- */
 .footer {
-  background-color: #2b070b;
+  background-color: #450D15;
   filter:brightness(0.8);
-  color: #fff;
+  color: #FCEEF0;
   text-align: center;
   padding: 10px;
   position: relative;
