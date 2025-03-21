@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./konakt.css">
 </head>
-<body class="fon">
-        <header>
+<body>
+        <header class="fon">
           <div class="navigation">
               <a class="logo" href="../index.html">
                   <img src="../logo.png" alt="Лого">
@@ -51,49 +51,50 @@
           </div>
       </div>
 
+    <header class="fon1">
+        <div class="kont">
+            <img class="fkont" src="../высота.jpg" alt="Лого" />
+            <h1>Контакты</h1>
+            
+            <div class="contact-info">
+            <p>Москва, улица Свободы, дом 40</p>
+            </div>
+            
+            <div class="contact-info">
+            <p>+7 499 456 7890</p>
+            </div>
+            
+            <div class="contact-info">
+            <p> Электронная почта: vg@restaurant.com</p>
+            </div>
+            <div class="contact-info">
+            <p>СМИ: pr@vg.com</p>
+            </div>
 
-  <div class="kont">
-    <img class="fkont" src="../высота.jpg" alt="Лого" />
-    <h1>Контакты</h1>
-    
-    <div class="contact-info">
-      <p>Москва, улица Свободы, дом 40</p>
-    </div>
-    
-    <div class="contact-info">
-      <p>+7 499 456 7890</p>
-    </div>
-    
-    <div class="contact-info">
-      <p> Электронная почта: vg@restaurant.com</p>
-    </div>
-    <div class="contact-info">
-      <p>СМИ: pr@vg.com</p>
-    </div>
+            <div id="map"></div>
+        </div>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ваш_ключ_api"></script>
+        <script>
+            // Инициализация карты
+            ymaps.ready(init);
 
-    <div id="map"></div>
-  </div>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ваш_ключ_api"></script>
-  <script>
-      // Инициализация карты
-      ymaps.ready(init);
+            function init() {
+                // Создание карты
+                var myMap = new ymaps.Map("map", {
+                    center: [55.844773, 37.456936], // Координаты центра карты
+                    zoom: 15 // Масштаб карты
+                });
 
-      function init() {
-          // Создание карты
-          var myMap = new ymaps.Map("map", {
-              center: [55.844773, 37.456936], // Координаты центра карты
-              zoom: 15 // Масштаб карты
-          });
+                // Добавление метки на карту
+                var myPlacemark = new ymaps.Placemark([55.844773, 37.456936], {
+                    hintContent: "Ресторан VG",
+                    balloonContent: "Ресторан VG"
+                });
 
-          // Добавление метки на карту
-          var myPlacemark = new ymaps.Placemark([55.844773, 37.456936], {
-              hintContent: "Ресторан VG",
-              balloonContent: "Ресторан VG"
-          });
-
-          myMap.geoObjects.add(myPlacemark);
-      }
-  </script>
+                myMap.geoObjects.add(myPlacemark);
+            }
+        </script>
+    </header>
  <div class="footer">
   <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
 </div> 
