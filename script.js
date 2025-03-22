@@ -38,3 +38,27 @@ function moveSlide(direction) {
     document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`; 
 } 
 
+let currentIndex = 0;
+const carouselInner = document.querySelector('.carousel-inner');
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+// Функция для перелистывания
+function showNextItem() {
+    currentIndex = (currentIndex + 1) % totalItems; // Переход к следующему элементу
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+}
+
+// Автоматическое перелистывание каждые 10 секунд
+setInterval(showNextItem, 10000);
+
+// Ручное перелистывание
+document.querySelector('.carousel-control.next').addEventListener('click', showNextItem);
+
+document.querySelector('.carousel-control.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Переход к предыдущему элементу
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+});
+
