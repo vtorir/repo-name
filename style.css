@@ -430,13 +430,14 @@ button[type="submit"]:hover {
 
 /* Текст внизу слева */
 .carousel-text {
-  max-width: 50%; /* Ширина текста */
+  max-width: 100%; /* Ширина текста */
   margin-top: 20px; /* Отступ сверху */
   padding: 20px;
   color: #FCEEF0; /* Светло-розовый текст */
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   line-height: 2;
-  text-align: left; /* Текст выровнен по левому краю */
+  text-align: center; /* Текст выровнен по левому краю */
+  font-weight: lighter;
 }
 
 /* --- Меню --- */
