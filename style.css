@@ -365,7 +365,7 @@ button[type="submit"]:hover {
 
 .info-number {
   font-size: 2.5rem; /* Большой размер числа */
-  font-weight: bold; /* Жирный шрифт */
+  font-weight: lighter; /* Жирный шрифт */
   display: block; /* Каждое число на новой строке */
 }
 
