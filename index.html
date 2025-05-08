@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ресторан GV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -28,25 +29,60 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-title">Зарезервировать</h1>
+                <div class="modal-header">
+                    <h1 class="modal-title">Забронировать столик</h1>
+                    <p class="modal-subtitle">Выберите дату, время и предпочтения</p>
+                </div>
+                
                 <form id="bookingForm">
-                    <label for="date">Дата:</label>
-                    <input type="date" id="date" name="date" required>
+                    <div class="form-step active" id="step1">
+                        <div class="form-group">
+                            <label for="date">Дата*</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time">Время*</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guests">Количество гостей*</label>
+                            <select id="guests" name="guests" required>
+                                <option value="" disabled selected>Выберите</option>
+                                <option value="1">1 человек</option>
+                                <option value="2">2 человека</option>
+                                <option value="3-4">3-4 человека</option>
+                                <option value="5+">5+ человек</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="btn-next">Выбрать столик →</button>
+                    </div>
                     
-                    <label for="time">Время:</label>
-                    <input type="time" id="time" name="time" required>
-                    
-                    <label for="preferences">Пожелания и номер телефона:</label>
-                    <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea>
-                    
-                    <label for="location">Расположение стола:</label>
-                    <select id="location" name="location">
-                        <option value="window">У окна</option>
-                        <option value="quiet">Спокойное место</option>
-                        <option value="bar">У барной стойки</option>
-                    </select>
-                    
-                    <button type="submit">Отправить</button>
+                    <div class="form-step" id="step2">
+                        <div class="seats-container">
+                            <!-- Сюда будет вставлена схема мест через JS -->
+                            <div class="seat-map-info">
+                                <div class="seat-example free"></div>
+                                <span>Свободно</span>
+                                <div class="seat-example booked"></div>
+                                <span>Занято</span>
+                                <div class="seat-example selected"></div>
+                                <span>Выбрано</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferences">Ваши пожелания</label>
+                            <textarea id="preferences" name="preferences" rows="3" placeholder="Особые пожелания, номер телефона..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-prev">← Назад</button>
+                            <button type="submit" class="btn-submit">Подтвердить бронь</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -98,18 +134,18 @@
                         <div class="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="./ресст.webp" alt="Фото 1">
+                                    <img src="/img/ресст.webp" alt="Фото 1">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./вика.jpg" alt="Фото 2">
+                                    <img src="/img/вика.jpg" alt="Фото 2">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./ресторан.webp" alt="Фото 3">
+                                    <img src="/img/ресторан.webp" alt="Фото 3">
                                 </div>
                             </div>
                             <!-- Кнопки для ручного перелистывания -->
-                            <button class="carousel-control prev">&#10094;</button>
-                            <button class="carousel-control next">&#10095;</button>
+                            <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
                 
@@ -144,19 +180,36 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="image-container1">
-                    <img src="./м-еда.png" alt="Фото меню">
-                    <div class="text-menu">
-                        <p>Вы не забудете это никогда</p>
-                        <h1>ПРОСТО ПОПРОБУЙТЕ</h1>
+                <section class="gallery-section">
+                    <div class="section-header">
+                      <h2>Галерея</h2>
+                      <div class="divider"></div>
+                      <p>Погрузитесь в атмосферу нашего ресторана</p>
                     </div>
-                </section>
-                
-                    <section class="menubar">
-                        <a href="./menu/menu.html" class="menu-button">Меню</a>
-                        <a href="./menu/wine.html" class="menu-button">Винная карта</a>
-                    </section>
+                  
+                    <div class="gallery-carousel">
+                      <div class="carousel-container">
+                        <div class="carousel-track">
+                          <div class="carousel-slide">
+                            <img src="/img/интерьер.jpg" alt="Интерьер ресторана">
+                          </div>
+                          <div class="carousel-slide">
+                            <img src="/img/блюда.jpg" alt="Блюда">
+                          </div>
+                          <div class="carousel-slide">
+                            <img src="/img/винно.jpg" alt="Винная карта">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                      <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                      
+                      <div class="carousel-dots">
+                        <!-- Точки будут добавлены через JS -->
+                      </div>
+                    </div>
+                  </section>
             </main>
 
         <footer class="footer">

@@ -1,191 +1,184 @@
-/*
-#110305 - текст,цвет, фон 
-#9C1C31 - активные кнопки 
-#FCEEF0 - когда надо белый, использовать этот цвет
-#450D15 - шапка, кнопки
-#781725 - неактивные кнопки, бордеры
-*/
-
-body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  display: flex; /* Используем Flexbox для размещения элементов */
-  flex-direction: column; /* Располагаем элементы по вертикали */
-  height: 100vh; /* Высота на весь экран */
-  margin: 0; /* Убираем отступы */
-}
-
-.fon {
-  background-color: #450D15;
+/* Основные стили страницы */
+.feedback-page {
+  background-color: #110305;
+  color: #FCEEF0;
+  padding: 2rem;
   flex-grow: 1;
 }
 
-.fon1 {
-  background-color: #781725;
-  flex-grow: 1;
-}
-
-header h1 {
-  margin: 0;
-}
-
-main {
-padding: 20px;
-}
-
-.review-form {
+.section-header {
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h1,
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #FCEEF0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #D9BFC5;
   max-width: 600px;
-  margin-left: 400px;
-  background-color: #2b070b;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  margin: 0 auto;
 }
 
-.review-form h2 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #FCEEF0;
-
-}
-
-.otz{
-max-width: 600px;
-margin: 0 auto 20px;
-padding: 20px;
-border-radius: 10px;
-}
-.reviews-section h1{
-  text-align: center;
-}
-
-.review-form label {
-  display: block;
-  margin-bottom: 5px;
-  color: #FCEEF0;
-}
-
-.review-form input[type="text"],
-.review-form input[type="email"],
-.review-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #FCEEF0;
-  background-color: #FCEEF0;
-  border-radius: 5px;
-}
-
-.review-form textarea {
-  height: 100px;
-}
- /*кнопка отправить*/
-.review-form button {
-  background-color: #781725;
-  color: #FCEEF0;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.review-form button:hover {
-  background-color: #9C1C31;
-}
-
-.reviews {
-width: 80%;
-margin: 20px auto;
-overflow: hidden;
-position: relative;
-}
-
-.reviews-container {
-display: flex;
-transition: transform 0.5s ease;
-}
-
-.review-list {
-display: flex;
-padding: 0;
-margin: 0;
-list-style: none;
-}
-
-.review {
-flex: 0 0 100%;
-padding: 20px;
-box-sizing: border-box;
-}
-
-.review h3 {
-margin-bottom: 10px;
-}
-
-.review p {
-margin: 0;
-}
-
-
-
-
-.reviews-section {
-  padding: 50px;
-}
-
-.reviews-section h1 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #FCEEF0;
-}
-
+/* Стили карточек отзывов */
 .review-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
 }
 
 .review-card {
+  background: rgba(69, 13, 21, 0.5);
   border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.review-card img {
-  width: 100px;
-  height: 100px;
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-avatar {
+  flex-shrink: 0;
+}
+
+.review-avatar img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  object-fit: cover;
+  border: 2px solid #9C1C31;
 }
 
-.review-card h3 {
-  font-size: 20px;
-  color: #110305;
-  margin-bottom: 10px;
+.review-content {
+  flex-grow: 1;
 }
 
-.review-card p {
-  font-size: 16px;
-  color: #110305;
-  line-height: 1.5;
+.review-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #FCEEF0;
 }
 
-/* Адаптивные стили для мобильных устройств (до 767px) */
-@media only screen and (max-width: 767px) {
-  .review-form {
-    max-width: 600px;
-    margin-left: 10px; 
+.review-rating {
+  color: #9C1C31;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  color: #D9BFC5;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.review-date {
+  color: #781725;
+  font-size: 0.9rem;
+}
+
+/* Стили формы */
+.feedback-form-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feedback-form {
+  background: rgba(69, 13, 21, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #FCEEF0;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(252, 238, 240, 0.1);
+  border: 1px solid #781725;
+  border-radius: 5px;
+  color: #FCEEF0;
+  font-family: 'Playfair Display', serif;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Стили рейтинга */
+.rating-group {
+  margin-bottom: 2rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.stars i {
+  font-size: 1.5rem;
+  color: #781725;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.stars i:hover,
+.stars i.active {
+  color: #9C1C31;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+  background: #9C1C31;
+  color: #FCEEF0;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background: #781725;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .review-cards {
+      grid-template-columns: 1fr;
   }
-
-}
-
-/* Адаптивные стили для мобильных устройств (до 767px) */
-@media only screen and (min-width: 2000px) {
-  .review-form {
-    max-width: 600px;
-    margin-left: 1200px; 
+  
+  .review-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .section-header h1 {
+      font-size: 2rem;
   }
 }

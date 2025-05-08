@@ -6,83 +6,157 @@
 #781725 - неактивные кнопки, бордеры
 */
 
-body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  display: flex; /* Используем Flexbox для размещения элементов */
-  flex-direction: column; /* Располагаем элементы по вертикали */
-  height: 100vh; /* Высота на весь экран */
-  margin: 0; /* Убираем отступы */
-}
+  body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Изменили на min-height вместо height */
+    margin: 0;
+    background-color: #110305;
+  }
 
+  .wrapper { /* Добавляем новый класс-обертку */
+    flex: 1; /* Занимает все доступное пространство */
+    display: flex;
+    flex-direction: column;
+  }
 
 .fon {
+  background-color: #450D15;
+}
+
+.fon1 {
   background-color: #110305;
-  flex-grow: 1;
 }
 
 
-.vino{
+/* Основные стили */
+.wine-page {
+  background-color: #110305;
+  color: #FCEEF0;
+  padding: 2rem;
+  /* Убрал min-height: 100vh - это было причиной проблемы */
+  flex-grow: 1; /* Добавил это */
+}
+
+.wine-header {
   text-align: center;
-  color: #781725;
-  margin-top: 50px;
-  font-size: 40px;
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.menu {
+
+.wine-header h1 {
+  font-size: 3rem;
+  color: #FCEEF0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.wine-header p {
+  font-size: 1.2rem;
+  color: #D9BFC5;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* Фильтры */
+.wine-filters {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
-  flex-grow: 1;
 }
-.dish {
-  width: 300px;
-  margin-top: 30px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #9C1C31;
+  color: #FCEEF0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
-.menu img {
-  width: 100%;
-  max-height: 200px;
+
+.filter-btn.active, .filter-btn:hover {
+  background: #9C1C31;
+  color: #FCEEF0;
+}
+
+/* Контейнер с винами */
+.wine-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Карточка вина */
+.wine {
+  background: rgba(69, 13, 21, 0.5);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(186, 16, 16, 0.1);
-}
-h2 {
-  color: #781725;
-  margin-top: 10px;
-}
-.menu p, 
-.vino p {
-  color: #781725;
-}
-.dish:hover {
-  transform: scale(1.05); /* Немного увеличим размер блока при наведении */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid #9C1C31;
 }
 
-.menu .dish p {
-  margin-bottom: 10px; /* Добавляем отступ снизу */
+.wine:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.menu .dish {
-  position: relative;
+.wine-info h3 {
+  font-size: 1.5rem;
+  color: #FCEEF0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
-.menu .dish::after {
-  content: attr(data-price);
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #9C1C31;
-  border-radius: 5px;
-  padding: 5px 10px;
-  display: none;
-  font-size: 14px;
+.wine-region {
+  color: #D9BFC5;
+  font-style: italic;
+  margin-bottom: 0.5rem;
 }
 
-.menu .dish:hover::after {
-  display: block;
+.wine-desc {
+  color: #D9BFC5;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.price {
+  display: inline-block;
+  background: #9C1C31;
+  color: #FCEEF0;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .wine-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .wine-header p {
+    font-size: 1rem;
+  }
+  
+  .wine-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 /* Стили для устройств с шириной экрана менее 768px (например, для телефонов) */
 @media only screen and (max-width: 768px) {

@@ -1,128 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню ресторана</title>
+    <title>Винная карта</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./wine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="fon">
-    <header>
-        <div class="navigation">
-            <a class="logo" href="../index.html">
-                <img src="../logo.png" alt="Лого">
-            </a>
-            <ul>
-                <li><a href="../menu/menu.html">Меню</a></li>
-                <li><a href="../wine/wine.html">Вино</a></li>
-                <li><a href="../feedback/feedback.html">Отзывы</a></li>
-                <li><a href="../kontakt/konakt.html">Контакты</a></li>
-            </ul>
-            <div class="okno">
-                <button id="openModalBtn">Зарезервировать</button>
+<body>
+    <div class="wrapper">
+        <header class="fon">
+            <div class="navigation">
+                <a class="logo" href="../index.html">
+                    <img src="../logo.png" alt="Лого V V">
+                </a>
+                <ul>
+                    <li><a href="../menu/menu.html">Меню</a></li>
+                    <li><a href="../wine/wine.html" class="active">Винная карта</a></li>
+                    <li><a href="../feedback/feedback.html">Отзывы</a></li>
+                    <li><a href="../kontakt/konakt.html">Контакты</a></li>
+                </ul>
+                <div class="okno">
+                    <button id="openModalBtn">Зарезервировать</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h1 class="modal-title">Зарезервировать</h1>
-            <form id="bookingForm">
-                <label for="date">Дата:</label>
-                <input type="date" id="date" name="date" required>
+        <main class="wine-page">
+            <section class="wine-header">
+                <h1>Винная карта</h1>
+                <p>Эксклюзивная подборка вин со всего мира. Каждое вино подобрано нашими сомелье для идеального сочетания с блюдами нашего меню.</p>
                 
-                <label for="time">Время:</label>
-                <input type="time" id="time" name="time" required>
-                
-                <label for="preferences">Пожелания и номер телефона:</label>
-                <textarea id="preferences" name="preferences" rows="4" cols="50"></textarea>
-                
-                <label for="location">Расположение стола:</label>
-                <select id="location" name="location">
-                    <option value="window">У окна</option>
-                    <option value="quiet">Спокойное место</option>
-                    <option value="bar">У барной стойки</option>
-                </select>
-                
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
+                <div class="wine-filters">
+                    <button class="filter-btn active" data-category="all">Все вина</button>
+                    <button class="filter-btn" data-category="red">Красные</button>
+                    <button class="filter-btn" data-category="white">Белые</button>
+                    <button class="filter-btn" data-category="sparkling">Игристые</button>
+                </div>
+            </section>
+
+            <section class="wine-container">
+                <!-- Красные вина -->
+                <div class="wine" data-category="red" data-price="5000">
+                    <div class="wine-info">
+                        <h3>Domaine de la Romanée-Conti</h3>
+                        <p class="wine-region">Бургундия, Франция, 2015</p>
+                        <p class="wine-desc">Красное сухое с нотами вишни и дуба.</p>
+                        <span class="price">5000 ₽</span>
+                    </div>
+                </div>
+
+                <div class="wine" data-category="red" data-price="4500">
+                    <div class="wine-info">
+                        <h3>Château Margaux</h3>
+                        <p class="wine-region">Бордо, Франция, 2016</p>
+                        <p class="wine-desc">Красное сухое с бархатистыми танинами.</p>
+                        <span class="price">4500 ₽</span>
+                    </div>
+                </div>
+
+                <!-- Белые вина -->
+                <div class="wine" data-category="white" data-price="4000">
+                    <div class="wine-info">
+                        <h3>Château d'Yquem</h3>
+                        <p class="wine-region">Сотерн, Франция, 1990</p>
+                        <p class="wine-desc">Белое сладкое с медовыми нотами.</p>
+                        <span class="price">4000 ₽</span>
+                    </div>
+                </div>
+
+                <!-- Игристые вина -->
+                <div class="wine" data-category="sparkling" data-price="5500">
+                    <div class="wine-info">
+                        <h3>Dom Pérignon Vintage</h3>
+                        <p class="wine-region">Шампань, Франция, 2010</p>
+                        <p class="wine-desc">Игристое с тонкими фруктовыми акцентами.</p>
+                        <span class="price">5500 ₽</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
+        </footer>
     </div>
 
-        <h1 class="vino">Вино</h1>
-        <div class="menu">
-            <div class="dish" data-price="5500">
-                <h2>Шампанское</h2>
-                <p>"Dom Pérignon Vintage" 2010 года</p>
-            </div>
-
-            <div class="dish" data-price="5000">
-                <h2>Бургундское вино </h2>
-                <p>"Domaine de la Romanée-Conti Romanée-Conti" 2015 года</p>
-            </div>
-
-            <div class="dish" data-price="4500">
-                <h2>Бордоское вино</h2>
-                <p>"Château Margaux" 2016 года</p>
-            </div>
-
-            <div class="dish" data-price="4000">
-                <h2>Тосканское вино</h2>
-                <p>"Sassicaia" 2017 года</p>
-            </div>
-            <div class="dish" data-price="5000">
-                <h2>Chateau Lafite Rothschild Magnum</h2>
-                <p>Красное сухое, 1973 года</p>
-            </div>
-            <div class="dish" data-price="5000">
-                <h2>Chateau Ausone</h2>
-                <p>Красное сухое, 1962 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Tignanello</h2>
-                <p>Красное сухое, 1981 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Chateau Cheval Blanc </h2>
-                <p>Красное сухое, 1986 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Chateau Suduiraut Sauternes Франция</h2>
-                <p>Сладкое белое, 1986 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Clos de Tart Grand Cru </h2>
-                <p>Красное сухое, 2009 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Screaming Eagle</h2>
-                <p>Красное сухое, 2010 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Chateau d'Yquem </h2>
-                <p>Сладкое белое, 1979 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Chateau d'Yquem </h2>
-                <p>Сладкое белое, 1965 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Chateau d'Yquem </h2>
-                <p>Белое сладкое, 1990 года</p>
-            </div>
-            <div class="dish" data-price="4000">
-                <h2>Pingus </h2>
-                <p>Красное сухое, 2004 года</p>
-            </div>
-        </div>
-<div class="footer">
-    <p>&copy; 2024 Ресторан "VG". Все права защищены.</p>
-</div> 
-<script src="../script.js"></script>
+    <script src="/img/script.js"></script>
+    <script src="/img/wine/wine.js"></script>
 </body>
 </html>
-
-
-
